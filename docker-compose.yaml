@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  xui:
+    image: sengnie/xui:alpha-zh
+    container_name: xui
+    volumes:
+      - ./data/db:/etc/x-ui/
+      - ./data/cert/:/cert/
+    restart: unless-stopped
+    network_mode: host
